@@ -1,0 +1,280 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tilemap/gunung 1.png" type="Texture" id=2]
+[ext_resource path="res://Area2D.gd" type="Script" id=3]
+[ext_resource path="res://CollisionShape2D.gd" type="Script" id=4]
+[ext_resource path="res://tilemap/tanah salju.png" type="Texture" id=5]
+[ext_resource path="res://tilemap/gunung 2.png" type="Texture" id=6]
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 32, 64, 0, 32, 0, 0, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 30, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "tanah salju.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 17 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tanah salju.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 11 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tanah salju.png 2"
+2/texture = ExtResource( 5 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 12 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tanah salju.png 3"
+3/texture = ExtResource( 5 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 32, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 13 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "tanah salju.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 32, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 14 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+6/name = "tanah salju.png 6"
+6/texture = ExtResource( 5 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 1
+6/autotile/bitmask_mode = 0
+6/autotile/bitmask_flags = [  ]
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 32, 32 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 16 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+8/name = "tanah salju.png 8"
+8/texture = ExtResource( 5 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 128, 0, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "tanah salju.png 9"
+9/texture = ExtResource( 5 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 96, 32, 32, 32 )
+9/tile_mode = 1
+9/autotile/bitmask_mode = 0
+9/autotile/bitmask_flags = [  ]
+9/autotile/icon_coordinate = Vector2( 0, 0 )
+9/autotile/tile_size = Vector2( 32, 32 )
+9/autotile/spacing = 0
+9/autotile/occluder_map = [  ]
+9/autotile/navpoly_map = [  ]
+9/autotile/priority_map = [  ]
+9/autotile/z_index_map = [  ]
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "tanah salju.png 10"
+10/texture = ExtResource( 5 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 96, 0, 32, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 18 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 2214, 5.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 23, -12 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -917380, 536870915, 0, -917379, 536870915, 0, -917375, 536870915, 0, -917371, 536870918, 0, -917370, 536870918, 0, -917369, 536870918, 0, -917368, 536870918, 0, -917367, 536870918, 0, -917366, 536870918, 0, -786313, 536870918, 0, -786312, 536870918, 0, -786311, 536870918, 0, -786310, 536870918, 0, -720777, 536870920, 0, -720772, 536870915, 0, -720771, 536870915, 0, -655241, 536870920, 0, -655233, 536870915, 0, -655232, 536870915, 0, -589705, 536870920, 0, -589693, 536870915, 0, -589692, 536870915, 0, -524153, 536870915, 0, -393112, 3, 0, -393108, 0, 0, -393107, 0, 0, -393103, 0, 0, -393102, 0, 0, -393101, 0, 0, -393100, 0, 0, -393099, 0, 0, -393098, 0, 0, -393097, 0, 0, -393096, 0, 0, -393095, 0, 0, -393094, 0, 0, -393093, 0, 0, -393088, 0, 0, -393087, 0, 0, -393086, 0, 0, -393085, 0, 0, -393084, 0, 0, -393083, 0, 0, -393082, 536870918, 0, -393081, 536870918, 0, -393080, 536870918, 0, -393079, 536870918, 0, -327602, 3, 0, -327600, 0, 0, -327599, 0, 0, -327598, 0, 0, -327572, 34, 0, -327571, 34, 0, -327567, 34, 0, -327566, 34, 0, -327565, 34, 0, -327564, 34, 0, -327563, 34, 0, -327562, 34, 0, -327556, 0, 0, -327555, 0, 0, -327554, 0, 0, -327553, 0, 0, -262069, 3, 0, -262042, 3, 0, -262031, 34, 0, -262030, 34, 0, -262029, 34, 0, -262028, 34, 0, -262027, 34, 0, -262026, 34, 0, -196597, 3, 0, -196595, 0, 0, -196594, 0, 0, -196593, 0, 0, -196592, 0, 0, -196591, 0, 0, -196590, 0, 0, -196589, 0, 0, -131063, 3, 0, -131059, 33, 0, -131058, 33, 0, -131057, 33, 0, -131056, 33, 0, -131055, 33, 0, -131054, 33, 0, -131053, 33, 0, -131003, 536870922, 0, -131002, 536870918, 0, -131001, 10, 0, -130995, 3, 0, -130987, 3, 0, -130968, 3, 0, -65529, 3, 0, -65468, 536870922, 0, -65464, 10, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 61, 536870922, 0, 62, 0, 0, 63, 0, 0, 64, 0, 0, 65, 0, 0, 66, 0, 0, 67, 0, 0, 73, 6, 0, 74, 6, 0, 75, 0, 0, 91, 0, 0, 92, 0, 0, 93, 0, 0, 94, 0, 0, 95, 0, 0, 102, 3, 0, 65536, 33, 0, 65537, 33, 0, 65538, 33, 0, 65539, 33, 0, 65540, 33, 0, 65541, 33, 0, 65556, 33, 0, 65557, 33, 0, 65558, 33, 0, 65559, 33, 0, 65560, 33, 0, 65561, 33, 0, 65562, 33, 0, 65563, 33, 0, 65564, 33, 0, 65565, 33, 0, 65569, 32, 0, 65570, 32, 0, 65571, 32, 0, 65572, 32, 0, 65573, 32, 0, 65574, 32, 0, 65575, 32, 0, 65576, 32, 0, 65577, 32, 0, 65579, 3, 0, 65596, 536870922, 0, 65611, 33, 0, 65612, 33, 0, 65613, 33, 0, 65614, 33, 0, 65615, 33, 0, 65616, 33, 0, 65624, 0, 0, 65625, 0, 0, 65626, 0, 0, 65627, 0, 0, 65628, 32, 0, 65629, 32, 0, 65630, 32, 0, 65631, 0, 0, 65632, 0, 0, 65633, 0, 0, 65634, 0, 0, 65635, 0, 0, 65636, 0, 0, 131072, 31, 0, 131073, 31, 0, 131074, 31, 0, 131075, 31, 0, 131076, 33, 0, 131077, 33, 0, 131092, 31, 0, 131093, 31, 0, 131094, 31, 0, 131095, 31, 0, 131096, 31, 0, 131097, 31, 0, 131098, 31, 0, 131099, 31, 0, 131100, 31, 0, 131101, 31, 0, 131105, 32, 0, 131106, 32, 0, 131107, 32, 0, 131108, 32, 0, 131109, 32, 0, 131110, 32, 0, 131111, 32, 0, 131112, 32, 0, 131113, 32, 0, 131117, 3, 0, 131131, 536870922, 0, 131133, 33, 0, 131134, 33, 0, 131135, 33, 0, 131136, 33, 0, 131137, 33, 0, 131138, 33, 0, 131139, 33, 0, 131147, 33, 0, 131148, 33, 0, 131149, 33, 0, 131150, 33, 0, 131151, 33, 0, 131152, 33, 0, 131160, 33, 0, 131161, 33, 0, 131162, 33, 0, 131163, 33, 0, 131164, 32, 0, 131165, 32, 0, 131166, 32, 0, 131167, 32, 0, 131168, 34, 0, 131169, 34, 0, 131170, 34, 0, 196655, 0, 0, 196656, 0, 0, 196657, 0, 0, 196658, 0, 0, 196659, 0, 0, 196660, 0, 0, 196661, 0, 0, 196662, 0, 0, 196663, 0, 0, 196664, 0, 0, 196665, 0, 0, 196666, 0, 0, 196667, 33, 0, 196668, 33, 0, 196692, 33, 0, 196693, 33, 0, 196696, 33, 0, 196697, 33, 0, 196698, 33, 0, 196699, 33, 0, 196700, 32, 0, 196701, 32, 0, 196702, 32, 0, 196703, 32, 0, 196704, 34, 0, 196705, 34, 0, 196706, 34, 0, 262191, 33, 0, 262192, 33, 0, 262193, 33, 0, 262194, 33, 0, 262195, 33, 0, 262196, 33, 0, 262197, 33, 0, 262198, 33, 0, 262199, 33, 0, 262200, 33, 0, 262201, 33, 0, 262202, 33, 0, 262203, 33, 0, 262204, 33, 0, 262228, 33, 0, 262229, 33, 0, 327727, 33, 0, 327728, 33, 0, 327729, 33, 0, 327730, 33, 0, 327731, 33, 0, 327732, 33, 0, 327733, 33, 0, 327734, 33, 0, 327735, 33, 0, 327736, 33, 0, 327737, 33, 0, 327738, 33, 0, 327739, 33, 0, 327740, 33, 0 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 23, -12 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2165, 152 )
+shape = SubResource( 10 )
+script = ExtResource( 4 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -23, 46 )
+motion_scale = Vector2( 0.2, 0.2 )
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 31, -87 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 513, 301 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 400, -80 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 513, 301 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 0.2 )
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 1, -42 )
+texture = ExtResource( 6 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 400, -42 )
+texture = ExtResource( 6 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
