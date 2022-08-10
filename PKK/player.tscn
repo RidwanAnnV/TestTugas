@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/characters/turtle.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 13.5 )
+extents = Vector2( 8.75, 9.125 )
 
 [node name="hero" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -15,9 +15,10 @@ scale = Vector2( -1, 1 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 0 )
+position = Vector2( 1, 2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 2, 3 )
 rotating = true
 current = true

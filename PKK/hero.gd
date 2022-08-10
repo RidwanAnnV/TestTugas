@@ -23,7 +23,7 @@ func _physics_process(delta):
 	else :
 		direction_x = 0
 		
-	if Input.is_action_just_pressed("lompat")and is_on_floor():
+	if Input.is_action_just_pressed("lompat")and is_on_floor() and true:
 		velocity.y = jump
 	
 	if direction_x != 0:
