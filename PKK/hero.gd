@@ -23,9 +23,6 @@ func _physics_process(delta):
 		direction_x = -1
 	else :
 		direction_x = 0
-		
-	if is_on_floor():
-		print(velocity.y)
 	
 	
 	if Input.is_action_just_pressed("lompat")and is_on_floor() == true:
