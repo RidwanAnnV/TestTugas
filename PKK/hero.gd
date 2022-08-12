@@ -14,6 +14,7 @@ func _ready():
 
 
 func _physics_process(delta):
+	var snap = Vector2.DOWN *5
 	velocity.y = velocity.y + gravity
 	
 	if Input.is_action_pressed("kanan"):
@@ -23,8 +24,13 @@ func _physics_process(delta):
 	else :
 		direction_x = 0
 		
-	if Input.is_action_just_pressed("lompat")and is_on_floor() and true:
+	if is_on_floor():
+		print(velocity.y)
+	
+	
+	if Input.is_action_just_pressed("lompat")and is_on_floor() == true:
 		velocity.y = jump
+		snap = Vector2.ZERO
 	
 	if direction_x != 0:
 		sprite.scale.x = direction_x
@@ -32,4 +38,4 @@ func _physics_process(delta):
 	
 	velocity.x = direction_x * speed
 	velocity.x = lerp(velocity.x,0,0.3);
-	velocity = move_and_slide(velocity,Vector2.UP);
+	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP, true);
