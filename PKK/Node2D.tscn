@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Backround/gunung 1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://CollisionShape2D.gd" type="Script" id=4]
 [ext_resource path="res://Backround/gunung 2.png" type="Texture" id=5]
 [ext_resource path="res://tilemap/ice mountain.png" type="Texture" id=6]
+[ext_resource path="res://Yeti.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0, 0, 0.0228691, 0, 31.5589, 0, 31.6669, 0, 31.8829, 14.487, 19.0309, 28.095, 13.1989, 27.987, 0.0228691, 14.919 )
@@ -21,6 +22,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 32, 64, 0, 32, 0, 0, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "ice mountain.png 0"
@@ -128,6 +132,69 @@ points = PoolVector2Array( 32, 64, 0, 32, 0, 0, 32, 32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
+5/name = "ice mountain.png 5"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 0, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "ice mountain.png 6"
+6/texture = ExtResource( 6 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 96, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "ice mountain.png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 128, 32, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "ice mountain.png 8"
+8/texture = ExtResource( 6 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 32, 32, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 20 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 423.5, 12.75 )
@@ -159,7 +226,7 @@ position = Vector2( 1, 2 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( -983013, 36, 0, -983012, 36, 0, -983011, 36, 0, -983010, 36, 0, -983009, 36, 0, -983008, 36, 0, -983007, 36, 0, -917480, 36, 0, -917479, 36, 0, -917478, 36, 0, -851946, 36, 0, -851945, 36, 0, -851944, 36, 0, -786411, 36, 0, -786410, 36, 0, -720876, 36, 0, -720875, 36, 0, -393200, 16, 0, -327658, 536870913, 0, -327657, 536870913, 0, -327656, 536870913, 0, -262128, 536870928, 0, -262125, 16, 0, -262124, 16, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196582, 0, 0, -196576, 16, 0, -65537, 1, 0, -5, 0, 0, -1, 1, 0, -65523, 0, 0, -65520, 1, 0, -65519, 1, 0, -65518, 1, 0, -65517, 1, 0, 65534, 1, 0, 65535, 1, 0, 10, 0, 0, 131071, 1, 0, 65543, 0, 0, 196603, 0, 0, 196607, 1, 0, 131077, 0, 0, 262142, 1, 0, 262143, 1, 0, 327673, 1, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0 )
+tile_data = PoolIntArray( -983013, 36, 0, -983012, 36, 0, -983011, 36, 0, -983010, 36, 0, -983009, 36, 0, -983008, 36, 0, -983007, 36, 0, -917480, 36, 0, -917479, 36, 0, -917478, 36, 0, -851946, 36, 0, -851945, 36, 0, -851944, 36, 0, -786411, 36, 0, -786410, 36, 0, -720876, 36, 0, -720875, 36, 0, -393200, 16, 0, -262128, 536870928, 0, -262125, 16, 0, -262124, 16, 0, -196590, 0, 0, -196576, 16, 0, -131055, 0, 0, -65520, 0, 0, 15, 0, 0, 65550, 0, 0, 131083, 536870916, 0, 131084, 536870914, 0, 131085, 3, 0, 196614, 1, 0, 196618, 536870916, 0, 327673, 536870920, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 536870914, 0, 262144, 536870914, 0, 262145, 536870914, 0, 262146, 536870914, 0, 262147, 536870914, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 2, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262177, 1, 0, 262178, 1, 0, 262179, 1, 0, 262180, 1, 0, 262181, 1, 0, 262182, 1, 0, 262183, 1, 0, 262184, 1, 0, 262185, 1, 0, 262186, 1, 0, 262187, 1, 0, 262188, 1, 0, 262189, 1, 0, 262190, 1, 0, 262191, 1, 0, 393209, 536870917, 0, 393210, 536870918, 0, 393211, 536870918, 0, 393212, 536870918, 0, 393213, 536870918, 0, 393214, 536870918, 0, 393215, 536870918, 0, 327680, 536870918, 0, 327681, 536870918, 0, 327682, 536870918, 0, 327683, 536870918, 0, 327684, 536870918, 0, 327685, 536870918, 0, 327686, 536870918, 0, 327687, 536870918, 0, 327688, 536870918, 0, 327689, 5, 0, 458745, 536870919, 0, 458746, 536870919, 0, 458747, 536870919, 0, 458748, 536870919, 0, 458749, 536870919, 0, 458750, 536870919, 0, 458751, 536870919, 0, 393216, 536870919, 0, 393217, 536870919, 0, 393218, 536870919, 0, 393219, 536870919, 0, 393220, 536870919, 0, 393221, 536870919, 0, 393222, 536870919, 0, 393223, 536870919, 0, 393224, 536870919, 0, 393225, 536870919, 0 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 23, -12 )
@@ -188,5 +255,10 @@ texture = ExtResource( 2 )
 [node name="Sprite2" type="Sprite" parent="backround/ParallaxLayer"]
 position = Vector2( 390, -3 )
 texture = ExtResource( 5 )
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="Yeti" parent="Enemy" instance=ExtResource( 7 )]
+position = Vector2( 313, 131 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
