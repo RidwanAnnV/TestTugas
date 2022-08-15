@@ -17,9 +17,11 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity,Vector2.UP)
 	
-	_update_animation()
+#	_update_animation()
 
-func _update_animation():
-	$AnimatedSprite.flip_h = true
-	if direction == -1:
-		$AnimatedSprite.flip_h = false
+#func _update_animation():
+#	if is_on_floor():
+#		$AnimatedSprite.play("walk")
+#	$AnimatedSprite.flip_h = true
+#	if direction == -1:
+#		$AnimatedSprite.flip_h = false

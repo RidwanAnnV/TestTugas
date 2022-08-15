@@ -6,7 +6,7 @@ var gravity = 12
 var jump = -300
 var velocity = Vector2.ZERO
 
-onready var sprite : Sprite = $Sprite
+onready var animatedSprite : AnimatedSprite = $Marimoo
 
 
 func _ready():
@@ -30,7 +30,7 @@ func _physics_process(delta):
 		snap = Vector2.ZERO
 	
 	if direction_x != 0:
-		sprite.scale.x = direction_x
+		animatedSprite.scale.x = direction_x
 	 
 	
 	velocity.x = direction_x * speed
