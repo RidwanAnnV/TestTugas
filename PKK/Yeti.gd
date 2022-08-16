@@ -8,6 +8,8 @@ export var direction = 1
 func _ready():
 	pass
 
+#MUHAMAD RIDWAN ANNAFI
+
 func _physics_process(delta):
 	velocity.y += gravity
 	if is_on_wall():

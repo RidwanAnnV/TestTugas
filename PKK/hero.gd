@@ -8,10 +8,12 @@ var velocity = Vector2.ZERO
 
 onready var animatedSprite : AnimatedSprite = $Marimoo
 
+#MUHAMAD RIDWAN ANNAFI
 
 func _ready():
 	add_to_group("player")
 
+#MUHAMAD RIDWAN ANNAFI
 
 func _physics_process(delta):
 	var snap = Vector2.DOWN *5
@@ -36,3 +38,20 @@ func _physics_process(delta):
 	velocity.x = direction_x * speed
 	velocity.x = lerp(velocity.x,0,0.3);
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP, true);
+	
+	update_animation()
+
+#MUHAMMAD RIDWAN ANNAFI
+
+func update_animation():
+	if is_on_floor():
+		if velocity.x < (speed * 0.5) and velocity.x > (-speed * 0.5):
+			animatedSprite.play("idle")
+		else:
+			animatedSprite.play("walk")
+	else:
+		if velocity.y > 0:
+			pass
+		else:
+			pass
+
