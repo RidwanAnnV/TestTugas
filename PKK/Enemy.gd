@@ -1,7 +1,8 @@
-extends Enemy
+class_name Enemy
+extends KinematicBody2D
 
 var gravity = 12
-var speed = 10
+export var speed = 10
 var velocity = Vector2.ZERO
 export var direction = 1
 var on_hit = false
@@ -12,7 +13,8 @@ onready var raycast : RayCast2D = $pivot/RayCast2D
 export var get_hit = 3 
 
 func _ready():
-	pass
+	$"top detection".connect("body_entered", self, "_on_top_detection_body_entered")
+	$"side detection".connect("area_entered", self,"_on_side_detection_body_entered")
 
 #MUHAMAD RIDWAN ANNAFI
 
@@ -23,8 +25,7 @@ func _physics_process(delta):
 	
 	velocity.x = direction * speed
 	
-	if not on_hit:
-		velocity = move_and_slide(velocity,Vector2.UP)
+	velocity = move_and_slide(velocity,Vector2.UP)
 	pivot.scale.x = direction
 	
 	
@@ -44,7 +45,7 @@ func _on_side_detection_body_entered(body):
 func _on_top_detection_body_entered(body):
 	if body.name == 'Hero' and get_hit > 0 :
 		body.velocity.y = body.jump
-	hit()
+		hit()
 
 func hit():
 	get_hit -= 1 
@@ -62,3 +63,4 @@ func dead():
 	$pivot/AnimatedSprite.play("dead")
 	yield($pivot/AnimatedSprite, "animation_finished")
 	queue_free()
+

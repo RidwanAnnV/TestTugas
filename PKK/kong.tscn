@@ -1,0 +1,137 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://kong.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/kong.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.5, 15 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 128, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "attack",
+"speed": 8.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "dead",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "walk",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 21.5, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 10.5, 1.60156 )
+
+[node name="kong" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource( 1 )
+speed = 75
+get_hit = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.5, 5 )
+shape = SubResource( 1 )
+
+[node name="pivot" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="pivot"]
+position = Vector2( 26, -17 )
+enabled = true
+cast_to = Vector2( 0, 49 )
+collision_mask = 15
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pivot"]
+position = Vector2( 10, 2 )
+scale = Vector2( 0.703125, 0.625 )
+frames = SubResource( 17 )
+animation = "walk"
+frame = 3
+playing = true
+flip_h = true
+
+[node name="side detection" type="Area2D" parent="."]
+position = Vector2( 45, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="side detection"]
+position = Vector2( -38.5, 5.5 )
+shape = SubResource( 18 )
+
+[node name="top detection" type="Area2D" parent="."]
+position = Vector2( -1, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top detection"]
+position = Vector2( 9, -14 )
+shape = SubResource( 19 )
+
+[connection signal="body_entered" from="side detection" to="." method="_on_side_detection_body_entered"]
+[connection signal="body_entered" from="top detection" to="." method="_on_top_detection_body_entered"]
