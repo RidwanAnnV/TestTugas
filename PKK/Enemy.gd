@@ -44,7 +44,7 @@ func _on_side_detection_body_entered(body):
 
 func _on_top_detection_body_entered(body):
 	if body.name == 'Hero' and get_hit > 0 :
-		body.velocity.y = body.jump
+		body.velocity.y = 0
 		hit()
 
 func hit():

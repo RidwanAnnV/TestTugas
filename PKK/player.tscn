@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/characters/main karakter.png" type="Texture" id=1]
 [ext_resource path="res://hero.gd" type="Script" id=2]
@@ -34,15 +34,11 @@ region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 1 )
-region = Rect2( 48, 96, 48, 32 )
+region = Rect2( 43, 96, 43, 32 )
 
 [sub_resource type="AtlasTexture" id=34]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 96, 47, 32 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 1 )
-region = Rect2( 94, 96, 47, 32 )
+region = Rect2( 0, 96, 43, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 3 )
@@ -99,10 +95,10 @@ animations = [ {
 "name": "Run",
 "speed": 3.0
 }, {
-"frames": [ SubResource( 27 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"frames": [ SubResource( 27 ), SubResource( 33 ), SubResource( 34 ) ],
 "loop": true,
 "name": "attack",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ SubResource( 13 ) ],
 "loop": true,
@@ -133,11 +129,11 @@ position = Vector2( -2, -4 )
 scale = Vector2( -1, 1 )
 frames = SubResource( 6 )
 animation = "attack"
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -1 )
+position = Vector2( -9, -2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]

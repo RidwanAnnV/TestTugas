@@ -19,9 +19,17 @@ var jump = -300
 var dash = 500
 var velocity = Vector2.ZERO
 var on_hit = false 
+var is_attack = false
 
 onready var animatedSprite : AnimatedSprite = $Marimoo
 onready var timer : Timer = $Timer
+
+func _input(event):
+	if event is InputEventKey and event.is_action_pressed("attack") and ATTACK:
+		is_attack = true
+		animatedSprite.play("attack")
+		yield(animatedSprite,"animation_finished")
+		is_attack = false
 
 #MUHAMAD RIDWAN ANNAFI
 
@@ -60,10 +68,6 @@ func _physics_process(delta):
 		if(not on_hit and Input.is_action_just_pressed("dash")):
 			Dash()
 	
-	if is_on_floor():
-		state = ATTACK
-		direction_x = 0 
-	
 	if direction_x != 0:
 		animatedSprite.scale.x = direction_x
 	 
@@ -72,7 +76,7 @@ func _physics_process(delta):
 	velocity.x = lerp(velocity.x,0,0.3);
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP, true);
 	
-	if not on_hit:
+	if not on_hit and not is_attack:
 		update_animation()
 
 #MUHAMMAD RIDWAN ANNAFI
@@ -88,6 +92,11 @@ func update_animation():
 		ATTACK:
 			animatedSprite.play("attack")
 
+func attack():
+	is_attack = true
+	animatedSprite.play("attack")
+	yield(animatedSprite,"animation_finished")
+	is_attack = false
 
 
 func Dash():

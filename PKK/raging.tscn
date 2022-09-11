@@ -97,7 +97,6 @@ shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="pivot"]
 position = Vector2( -20, -9 )
-scale = Vector2( 1, 1 )
 enabled = true
 collision_mask = 15
 
@@ -106,7 +105,7 @@ position = Vector2( 13, 4 )
 scale = Vector2( 1.17188, 1.0625 )
 frames = SubResource( 6 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 

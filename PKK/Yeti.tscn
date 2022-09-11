@@ -109,6 +109,7 @@ collision_mask = 15
 scale = Vector2( 0.8125, 0.921875 )
 frames = SubResource( 13 )
 animation = "walk"
+frame = 3
 playing = true
 flip_h = true
 
