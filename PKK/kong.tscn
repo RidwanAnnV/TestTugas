@@ -86,7 +86,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 21.5, 5.5 )
+extents = Vector2( 17, 5.5 )
 
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 10.5, 1.60156 )
@@ -115,7 +115,7 @@ position = Vector2( 10, 2 )
 scale = Vector2( 0.703125, 0.625 )
 frames = SubResource( 17 )
 animation = "walk"
-frame = 1
+frame = 3
 playing = true
 flip_h = true
 
@@ -123,7 +123,7 @@ flip_h = true
 position = Vector2( 45, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="side detection"]
-position = Vector2( -38.5, 5.5 )
+position = Vector2( -38, 5.5 )
 shape = SubResource( 18 )
 
 [node name="top detection" type="Area2D" parent="."]

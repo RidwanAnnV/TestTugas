@@ -34,7 +34,14 @@ func _input(event):
 		animatedSprite.play("attack")
 		yield(animatedSprite,"animation_finished")
 		is_attack = false
+		$HitBox/CollisionShape2D.disabled == true;
 
+func attack():
+	is_attack = true
+	animatedSprite.play("attack")
+	yield(animatedSprite,"animation_finished")
+	$HitBox/CollisionShape2D.disabled == false;
+	is_attack = false
 #MUHAMAD RIDWAN ANNAFI
 
 func _ready():
@@ -96,11 +103,6 @@ func update_animation():
 		ATTACK:
 			animatedSprite.play("attack")
 
-func attack():
-	is_attack = true
-	animatedSprite.play("attack")
-	yield(animatedSprite,"animation_finished")
-	is_attack = false
 
 
 func Dash():
@@ -133,6 +135,6 @@ func dead():
 	set_collision_layer_bit(0,false)
 	set_collision_mask_bit(2, false)
 	yield($Marimoo, "animation_finished")
-	yield(get_tree().create_timer(2),"timeout")
-	get_tree().change_scene("res://Node2D.tscn")
+	yield(get_tree().create_timer(0.5),"timeout")
+	get_tree().change_scene("res://Dimentional Mountain.tscn")
 	queue_free()

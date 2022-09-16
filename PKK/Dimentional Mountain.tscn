@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://kong.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Backround/gunung 2.png" type="Texture" id=7]
 [ext_resource path="res://assets/characters/Half_heart.png" type="Texture" id=8]
 [ext_resource path="res://CollisionShape2D.gd" type="Script" id=9]
+[ext_resource path="res://Backround/panel.png" type="Texture" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 32, 0, 32, 16, 16, 32, 0, 16, 0, 0, 0, 0 )
@@ -295,7 +296,7 @@ script = ExtResource( 9 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 42, -33 )
 frames = SubResource( 14 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="backround" type="ParallaxBackground" parent="."]
@@ -343,14 +344,33 @@ value = 100.0
 texture_progress = ExtResource( 8 )
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.0
+margin_top = -47.0
+margin_right = 47.0
+margin_bottom = 47.0
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 20.0
-margin_bottom = 20.0
+margin_right = 94.0
+margin_bottom = 94.0
+texture = ExtResource( 10 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+margin_left = 43.0
+margin_top = 40.0
+margin_right = 51.0
+margin_bottom = 54.0
+
+[node name="Label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+margin_right = 8.0
+margin_bottom = 14.0
+text = "d"
 
 [connection signal="hero_update_healt" from="Hero" to="Dead zone" method="_on_Hero_hero_update_healt"]
 [connection signal="body_entered" from="Dead zone" to="Dead zone" method="_on_Area2D_body_entered"]
