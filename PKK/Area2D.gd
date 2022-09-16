@@ -1,5 +1,6 @@
 extends Area2D
 
+onready var healt_progress = $"../CanvasLayer/HealtBar/TextureProgress"
 
 func _ready():
 	pass 
@@ -12,3 +13,7 @@ func _on_Area2D_body_entered(body):
 
 
 #MUHAMAD RIDWAN ANNAFI
+
+
+func _on_Hero_hero_update_healt(value):
+	healt_progress.value = value

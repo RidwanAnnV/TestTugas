@@ -105,6 +105,11 @@ animations = [ {
 "name": "dash",
 "speed": 5.0
 }, {
+"frames": [  ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
 "name": "hit",
@@ -128,8 +133,7 @@ dash_duration = 0.5
 position = Vector2( -2, -4 )
 scale = Vector2( -1, 1 )
 frames = SubResource( 6 )
-animation = "attack"
-frame = 1
+animation = "dead"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

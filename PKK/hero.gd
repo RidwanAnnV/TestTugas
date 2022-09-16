@@ -20,9 +20,13 @@ var dash = 500
 var velocity = Vector2.ZERO
 var on_hit = false 
 var is_attack = false
+var healt_max = 100
+var healt = 100
 
 onready var animatedSprite : AnimatedSprite = $Marimoo
 onready var timer : Timer = $Timer
+
+signal hero_update_healt(value)
 
 func _input(event):
 	if event is InputEventKey and event.is_action_pressed("attack") and ATTACK:
@@ -112,7 +116,23 @@ func _on_Timer_timeout():
 
 func hit():
 	on_hit = true
+	
+	healt -= 50 
+	emit_signal("hero_update_healt",(float(healt)/float(healt_max))* 100)
+	
 	animatedSprite.play("hit")
 	yield(get_tree().create_timer(0.5),"timeout")
-	on_hit = false
+	
+	if healt <= 0:
+		dead()
+	else:
+		on_hit = false
 
+func dead():
+	$Marimoo.play("dead")
+	set_collision_layer_bit(0,false)
+	set_collision_mask_bit(2, false)
+	yield($Marimoo, "animation_finished")
+	yield(get_tree().create_timer(2),"timeout")
+	get_tree().change_scene("res://Node2D.tscn")
+	queue_free()
