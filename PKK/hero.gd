@@ -23,6 +23,8 @@ var is_attack = false
 var healt_max = 100
 var healt = 100
 
+signal hero_dead
+
 onready var animatedSprite : AnimatedSprite = $Marimoo
 onready var timer : Timer = $Timer
 
@@ -30,17 +32,15 @@ signal hero_update_healt(value)
 
 func _input(event):
 	if event is InputEventKey and event.is_action_pressed("attack") and ATTACK:
-		is_attack = true
-		animatedSprite.play("attack")
-		yield(animatedSprite,"animation_finished")
-		is_attack = false
-		$HitBox/CollisionShape2D.disabled == true;
+		attack()
 
 func attack():
 	is_attack = true
+	$HitBox.monitoring = true;
 	animatedSprite.play("attack")
 	yield(animatedSprite,"animation_finished")
-	$HitBox/CollisionShape2D.disabled == false;
+	$HitBox.monitoring = false;
+	print($HitBox.monitoring)
 	is_attack = false
 #MUHAMAD RIDWAN ANNAFI
 
@@ -135,6 +135,6 @@ func dead():
 	set_collision_layer_bit(0,false)
 	set_collision_mask_bit(2, false)
 	yield($Marimoo, "animation_finished")
-	yield(get_tree().create_timer(0.5),"timeout")
-	get_tree().change_scene("res://Dimentional Mountain.tscn")
+	emit_signal("hero_dead")
+	yield(get_tree().create_timer(0),"timeout")
 	queue_free()
