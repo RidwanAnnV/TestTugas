@@ -1,18 +1,18 @@
 extends Enemy
 
-var gravity = 12
-var speed = 10
-var velocity = Vector2.ZERO
-export var direction = 1
-var on_hit = false
+#var gravity = 12
+#var speed = 10
+#var velocity = Vector2.ZERO
+#export var direction = 1
+#var on_hit = false
 
-onready var pivot = $pivot
-onready var raycast : RayCast2D = $pivot/RayCast2D
+#onready var pivot = $pivot
+#onready var raycast : RayCast2D = $pivot/RayCast2D
 
-export var get_hit = 3 
+#export var get_hit = 3 
 
-func _ready():
-	pass
+#func _ready():
+#	pass
 
 #MUHAMAD RIDWAN ANNAFI
 
